@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Karivo provides reliable home and property repair, maintenance and improvement services across Kolkata.">
+<title>Karivo | Home & Property Services in Kolkata</title>
+
+<style>
+:root{
+  --navy:#082B4C;
+  --navy-2:#0E3A61;
+  --orange:#F36A21;
+  --green:#19A45A;
+  --blue:#087BEA;
+  --light:#F5F8FB;
+  --text:#17324D;
+  --muted:#64748B;
+  --white:#fff;
+  --border:#E3EAF1;
+  --shadow:0 14px 40px rgba(8,43,76,.09);
+  --radius:18px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.6;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+
+.container{
+  width:min(1160px,calc(100% - 36px));
+  margin:auto;
+}
+
+/* NAV */
+.site-nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid rgba(8,43,76,.08);
+  backdrop-filter:blur(12px);
+}
+.nav-inner{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.brand img{width:126px;height:auto}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:14px;
+  font-weight:700;
+  color:var(--navy);
+}
+.nav-links a{position:relative}
+.nav-links a:after{
+  content:"";
+  position:absolute;
+  left:0;bottom:-7px;
+  width:0;height:2px;
+  background:var(--orange);
+  transition:width .2s ease;
+}
+.nav-links a:hover:after{width:100%}
+.nav-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--orange);
+  color:#fff;
+  padding:11px 18px;
+  border-radius:9px;
+  font-size:14px;
+  font-weight:800;
+}
+.menu-btn{
+  display:none;
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--navy);
+  width:42px;height:42px;
+  border-radius:9px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  background:
+    radial-gradient(circle at 12% 15%,rgba(243,106,33,.08),transparent 30%),
+    linear-gradient(135deg,#F8FBFD 0%,#fff 65%);
+  overflow:hidden;
+}
+.hero-grid{
+  min-height:650px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:52px;
+  padding:62px 0 70px;
+}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--orange);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:18px;
+}
+.eyebrow:before{
+  content:"";
+  width:28px;height:2px;
+  background:var(--orange);
+}
+.hero h1{
+  color:var(--navy);
+  font-size:clamp(40px,5vw,68px);
+  line-height:1.02;
+  letter-spacing:-.045em;
+  max-width:700px;
+}
+.hero h1 span{color:var(--orange)}
+.hero-copy{
+  margin-top:22px;
+  max-width:610px;
+  color:var(--muted);
+  font-size:18px;
+}
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:9px;
+  min-height:48px;
+  padding:0 20px;
+  border-radius:9px;
+  font-weight:800;
+  font-size:14px;
+  border:1px solid transparent;
+}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:#db5915}
+.btn-outline{border-color:#CAD6E1;color:var(--navy);background:#fff}
+.btn-outline:hover{border-color:var(--navy)}
+.hero-points{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:30px;
+  color:var(--navy);
+  font-size:13px;
+  font-weight:700;
+}
+.hero-points span{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+.check{
+  width:20px;height:20px;
+  display:grid;place-items:center;
+  border-radius:50%;
+  background:#EAF7EF;
+  color:var(--green);
+  font-size:13px;
+  font-weight:900;
+}
+.hero-visual{
+  position:relative;
+  min-height:530px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+.hero-visual:before{
+  content:"";
+  position:absolute;
+  width:420px;height:420px;
+  right:25px;
+  border-radius:50%;
+  background:#EAF1F6;
+}
+.hero-image{
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:560px;
+  height:530px;
+  object-fit:cover;
+  object-position:78% center;
+  border-radius:26px;
+  box-shadow:0 25px 70px rgba(8,43,76,.18);
+}
+.hero-badge{
+  position:absolute;
+  z-index:2;
+  right:15px;
+  bottom:34px;
+  background:#fff;
+  padding:16px 18px;
+  border-radius:13px;
+  box-shadow:var(--shadow);
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.badge-icon{
+  width:42px;height:42px;
+  display:grid;place-items:center;
+  border-radius:10px;
+  background:#EAF7EF;
+  color:var(--green);
+}
+.hero-badge strong{display:block;color:var(--navy);font-size:14px}
+.hero-badge small{display:block;color:var(--muted);font-size:12px}
+
+/* TRUST BAR */
+.trust{
+  background:var(--navy);
+  color:#fff;
+}
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+.trust-item{
+  padding:22px 20px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border-right:1px solid rgba(255,255,255,.15);
+}
+.trust-item:last-child{border-right:0}
+.trust-icon{color:#fff;opacity:.95}
+.trust-item strong{display:block;font-size:14px}
+.trust-item span{display:block;color:#C9D8E5;font-size:12px;margin-top:2px}
+
+/* SECTION */
+.section{padding:92px 0}
+.section.alt{background:var(--light)}
+.section-head{
+  max-width:700px;
+  margin-bottom:42px;
+}
+.section-kicker{
+  color:var(--orange);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:9px;
+}
+.section h2{
+  color:var(--navy);
+  font-size:clamp(30px,4vw,46px);
+  line-height:1.1;
+  letter-spacing:-.035em;
+}
+.section-head p{
+  color:var(--muted);
+  margin-top:14px;
+}
+
+/* SERVICES */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.service-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:0 6px 24px rgba(8,43,76,.04);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.service-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+  border-color:#D4E0EA;
+}
+.service-icon{
+  width:54px;height:54px;
+  display:grid;place-items:center;
+  border-radius:14px;
+  margin-bottom:20px;
+}
+.service-icon.blue{background:#E8F2FF;color:#087BEA}
+.service-icon.orange{background:#FFF0E8;color:var(--orange)}
+.service-icon.green{background:#E9F8EF;color:var(--green)}
+.service-icon.navy{background:#E9EFF5;color:var(--navy)}
+.service-icon.red{background:#FFF0EC;color:#E9432D}
+.service-icon.purple{background:#F1ECFF;color:#6844C7}
+.service-card h3{font-size:20px;color:var(--navy)}
+.service-card p{color:var(--muted);font-size:14px;margin:8px 0 22px}
+.service-link{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:var(--green);
+  font-size:13px;
+  font-weight:900;
+}
+.service-link:hover{color:#118447}
+
+/* WHY */
+.why-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:60px;
+  align-items:center;
+}
+.why-image{
+  width:100%;
+  height:510px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+}
+.feature-list{display:grid;gap:22px;margin-top:28px}
+.feature{
+  display:flex;gap:15px;
+}
+.feature-icon{
+  flex:0 0 44px;
+  width:44px;height:44px;
+  display:grid;place-items:center;
+  background:#EFF5F9;
+  color:var(--navy);
+  border-radius:10px;
+}
+.feature h3{font-size:16px;color:var(--navy)}
+.feature p{font-size:13px;color:var(--muted);margin-top:3px}
+
+/* SERVICE AREA */
+.area{
+  background:
+    linear-gradient(rgba(5, 24, 40, 0.78), rgba(5, 24, 40, 0.78)),
+    url('https://res.cloudinary.com/dx6zonqrt/image/upload/v1791376364/Bridge-2.jpg_xcjkp5.jpg') center center / cover no-repeat;
+  color:#fff;
+  padding:72px 0;
+}
+
+.area-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:40px;
+}
+
+.area h2{
+  font-size:clamp(30px,4vw,44px);
+  line-height:1.1;
+}
+
+.area p{
+  color:#C9D8E5;
+  margin-top:12px;
+  max-width:650px;
+}
+
+.area-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:24px;
+}
+
+.area-tags span{
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.06);
+  border-radius:50px;
+  padding:8px 13px;
+  font-size:12px;
+}
+
+.area .btn-primary{
+  white-space:nowrap;
+}
+/* CTA */
+.cta{
+  margin-top:0;
+  padding:78px 0;
+  background:linear-gradient(135deg,#FFF8F3,#fff);
+}
+.cta-box{
+  background:#fff;
+  border:1px solid #F3DED1;
+  border-radius:24px;
+  padding:48px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  box-shadow:var(--shadow);
+}
+.cta h2{color:var(--navy);font-size:clamp(28px,4vw,42px);line-height:1.1}
+.cta p{color:var(--muted);margin-top:9px}
+
+/* FOOTER */
+footer{
+  background:#061F37;
+  color:#fff;
+  padding:48px 0 24px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1fr;
+  gap:50px;
+}
+.footer-brand img{width:145px;background:#fff;border-radius:8px;padding:7px}
+.footer-brand p{color:#AFC2D3;max-width:400px;margin-top:16px;font-size:13px}
+footer h3{font-size:14px;margin-bottom:13px}
+footer a,footer span{display:block;color:#AFC2D3;font-size:13px;margin:7px 0}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:35px;
+  padding-top:20px;
+  color:#829CAF;
+  font-size:11px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .nav-links{
+    display:none;
+    position:absolute;
+    left:18px;right:18px;top:70px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:18px;
+    box-shadow:var(--shadow);
+    flex-direction:column;
+    align-items:flex-start;
+    gap:17px;
+  }
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  .nav-cta{display:none}
+  .hero-grid{
+    grid-template-columns:1fr;
+    padding-top:48px;
+  }
+  .hero-visual{min-height:450px}
+  .hero-image{height:450px}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-item:nth-child(2){border-right:0}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr;gap:35px}
+  .why-image{height:420px}
+  .area-grid{grid-template-columns:1fr}
+  .cta-box{padding:35px;flex-direction:column;align-items:flex-start}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:600px){
+  .container{width:min(100% - 28px,1160px)}
+  .brand img{width:112px}
+  .hero-grid{padding:38px 0 48px}
+  .hero h1{font-size:42px}
+  .hero-copy{font-size:16px}
+  .hero-points{gap:10px;display:grid}
+  .hero-visual{min-height:370px}
+  .hero-image{height:370px;border-radius:18px}
+  .hero-badge{left:10px;bottom:15px}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .trust-item{padding:17px 10px}
+  .trust-item strong{font-size:12px}
+  .trust-item span{font-size:10px}
+  .section{padding:65px 0}
+  .services-grid{grid-template-columns:1fr}
+  .service-card{padding:24px}
+  .why-image{height:330px}
+  .area{padding:58px 0}
+  .cta{padding:58px 0}
+  .cta-box{padding:28px 22px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column}
+}
+
+/* ACCESSIBLE FOCUS */
+a:focus-visible,button:focus-visible{
+  outline:3px solid rgba(243,106,33,.35);
+  outline-offset:3px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home" aria-label="Karivo home">
+      <img src="assets/logo.jpg" alt="Karivo">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Karivo</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="https://wa.me/919818282540?text=Hello%20Karivo%2C%20I%20would%20like%20to%20book%20a%20service.">WhatsApp Us</a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Home & Property Experts in Kolkata</div>
+      <h1>Reliable service for <span>every space.</span></h1>
+      <p class="hero-copy">
+        From everyday repairs to complete property maintenance, Karivo brings skilled professionals,
+        transparent communication and dependable service to homes, offices and commercial spaces.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/919818282540?text=Hello%20Karivo%2C%20I%20need%20a%20property%20service.">
+          Get a Free Quote
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-outline" href="tel:+919818282540">Call 098182 82540</a>
+      </div>
+
+      <div class="hero-points">
+        <span><i class="check">✓</i> Skilled professionals</span>
+        <span><i class="check">✓</i> Transparent pricing</span>
+        <span><i class="check">✓</i> On-time service</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-badge">
+        <div class="badge-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6l7-3Z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <div>
+          <strong>Trusted Property Care</strong>
+          <small>Serving homes & businesses across Kolkata</small>
+        </div>
+      </div>
+      <img class="hero-image" src="assets/hero.png" alt="Karivo professional providing property service" loading="eager">
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <svg class="trust-icon" width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 5 6v5c0 4.4 2.8 8 7 10 4.2-2 7-5.6 7-10V6l-7-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
+      <div><strong>Quality Workmanship</strong><span>Done with care</span></div>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 12h8M7 7l-3 3 3 3M17 17l3-3-3-3"/><path d="M8 7h4a4 4 0 0 1 4 4v6M16 17h-4a4 4 0 0 1-4-4V7"/></svg>
+      <div><strong>Transparent Communication</strong><span>Clear from start to finish</span></div>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
+      <div><strong>On-Time Service</strong><span>Respecting your schedule</span></div>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3.5 19c.6-3.1 2.4-5 5.5-5s4.9 1.9 5.5 5M14 14c2.7-.4 5 1.2 5.5 4"/></svg>
+      <div><strong>Skilled Professionals</strong><span>Trusted property experts</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">What we do</div>
+      <h2>Complete property services, under one roof.</h2>
+      <p>Book the right professional for repairs, maintenance and improvements across your property.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card">
+        <div class="service-icon blue">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M5 12v7h14v-7M4 9l8-6 8 6"/><path d="M8 19v-4h3v4M15 19v-4h-3"/></svg>
+        </div>
+        <h3>Civil Work & Repairs</h3>
+        <p>Wall repairs, masonry, plastering, tile work and general property improvements.</p>
+        <a class="service-link" href="https://wa.me/919818282540?text=Hello%20Karivo%2C%20I%20need%20Civil%20Work%20%26%20Repairs.">WhatsApp for this service →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon orange">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 5 13h6l-1 9 8-11h-6l1-9Z"/></svg>
+        </div>
+        <h3>Electrical Services</h3>
+        <p>Lighting, switches, fixtures, wiring checks and everyday electrical repairs.</p>
+        <a class="service-link" href="https://wa.me/919818282540?text=Hello%20Karivo%2C%20I%20need%20Electrical%20Services.">WhatsApp for this service →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon navy">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m14 6 4-4 4 4-4 4"/><path d="m18 2-9 9"/><path d="m5 12 7 7-3 3H5v-4l3-3"/><path d="m10 7 7 7"/></svg>
+        </div>
+        <h3>Carpentry Services</h3>
+        <p>Furniture fixes, shelves, doors, cabinets and practical woodwork solutions.</p>
+        <a class="service-link" href="https://wa.me/919818282540?text=Hello%20Karivo%2C%20I%20need%20Carpentry%20Services.">WhatsApp for this service →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon blue">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v7M8 5v5a4 4 0 0 0 8 0V5"/><path d="M4 12h16M7 12v7M17 12v7"/><path d="M5 19h14"/></svg>
+        </div>
+        <h3>Plumbing Services</h3>
+        <p>Leak repairs, taps, pipes, fittings, drainage and routine plumbing maintenance.</p>
+        <a class="service-link" href="https://wa.me/919818282540?text=Hello%20Karivo%2C%20I%20need%20Plumbing%20Services.">WhatsApp for this service →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon red">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h11"/><path d="M15 5v6"/><path d="M18 8h2"/><path d="M4 8v8"/><path d="M4 16h5"/><path d="M9 13v6"/></svg>
+        </div>
+        <h3>Painting Services</h3>
+        <p>Interior and exterior painting, touch-ups and finishing for refreshed spaces.</p>
+        <a class="service-link" href="https://wa.me/919818282540?text=Hello%20Karivo%2C%20I%20need%20Painting%20Services.">WhatsApp for this service →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon purple">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.8 1.8 0 0 0 .4 2l.1.1-1.7 1.7-.1-.1a1.8 1.8 0 0 0-2-.4 1.8 1.8 0 0 0-1.1 1.7V20h-2.4v-.1a1.8 1.8 0 0 0-1.1-1.7 1.8 1.8 0 0 0-2 .4l-.1.1-1.7-1.7.1-.1a1.8 1.8 0 0 0 .4-2A1.8 1.8 0 0 0 6.5 14H6v-2.4h.5a1.8 1.8 0 0 0 1.7-1.1 1.8 1.8 0 0 0-.4-2l-.1-.1 1.7-1.7.1.1a1.8 1.8 0 0 0 2 .4A1.8 1.8 0 0 0 12.6 5V4h2.4v1a1.8 1.8 0 0 0 1.1 1.7 1.8 1.8 0 0 0 2-.4l.1-.1 1.7 1.7-.1.1a1.8 1.8 0 0 0-.4 2 1.8 1.8 0 0 0 1.7 1.1h.5V14h-.5a1.8 1.8 0 0 0-1.7 1Z"/></svg>
+        </div>
+        <h3>Property Maintenance</h3>
+        <p>Regular upkeep and preventive maintenance to keep your property working well.</p>
+        <a class="service-link" href="https://wa.me/919818282540?text=Hello%20Karivo%2C%20I%20need%20Property%20Maintenance.">WhatsApp for this service →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why-us">
+  <div class="container why-grid">
+    <img class="why-image" src="assets/service-collage.png" alt="Karivo property service professionals" loading="lazy">
+
+    <div>
+      <div class="section-kicker">Why Karivo</div>
+      <h2>Practical solutions. Professional service.</h2>
+      <p style="color:var(--muted);margin-top:14px">
+        Whether it is a quick repair or a larger property improvement, our approach is simple:
+        understand the requirement, communicate clearly and complete the work properly.
+      </p>
+
+      <div class="feature-list">
+        <div class="feature">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 5 6v5c0 4.4 2.8 8 7 10 4.2-2 7-5.6 7-10V6l-7-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
+          </div>
+          <div><h3>Quality-focused workmanship</h3><p>We focus on neat, reliable work rather than rushing through the job.</p></div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 12h8M7 7l-3 3 3 3M17 17l3-3-3-3"/></svg>
+          </div>
+          <div><h3>Clear communication</h3><p>Requirements, service scope and expectations stay straightforward.</p></div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <div><h3>Reliable scheduling</h3><p>We aim to provide dependable service and respect agreed timelines.</p></div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 7h14M5 17h14"/></svg>
+          </div>
+          <div><h3>Homes, offices & commercial spaces</h3><p>One service partner for multiple property types across Kolkata.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section  class="area" id="areas">
+  <div class="container area-grid">
+    <div>
+      <div class="section-kicker" style="color:#FF9A65">Service area</div>
+      <h2>Serving homes and businesses across Kolkata.</h2>
+      <p>From residential homes to offices, shops, clinics, restaurants and commercial properties, Karivo is built for everyday property care.</p>
+      <div class="area-tags">
+        <span>Homes</span><span>Offices</span><span>Shops</span><span>Clinics</span><span>Restaurants</span><span>Commercial Properties</span>
+      </div>
+    </div>
+    <a class="btn btn-primary" href="https://wa.me/919818282540?text=Hello%20Karivo%2C%20please%20help%20me%20with%20a%20service%20in%20Kolkata.">Check Service Availability</a>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="container">
+    <div class="cta-box">
+      <div>
+        <div class="section-kicker">Need a service?</div>
+        <h2>Let's take care of your property.</h2>
+        <p>Tell us what you need and our team can guide you on the next step.</p>
+      </div>
+      <div class="hero-actions" style="margin-top:0">
+        <a class="btn btn-primary" href="https://wa.me/919818282540?text=Hello%20Karivo%2C%20I%20would%20like%20a%20quote.">WhatsApp for a Quote</a>
+        <a class="btn btn-outline" href="tel:+919818282540">Call Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="Karivo">
+        <p>Your property. Our expertise. Reliable repairs, maintenance and improvement services for properties across Kolkata.</p>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <a href="#services">Civil Work & Repairs</a>
+        <a href="#services">Electrical Services</a>
+        <a href="#services">Carpentry Services</a>
+        <a href="#services">Plumbing Services</a>
+        <a href="#services">Painting Services</a>
+        <a href="#services">Property Maintenance</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:+919818282540">098182 82540</a>
+        <a href="https://wa.me/919818282540">WhatsApp</a>
+        <span>Kolkata, West Bengal</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Karivo. All rights reserved.</span>
+      <span>Home & Property Services in Kolkata</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('navLinks');
+
+  menuBtn.addEventListener('click', function(){
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  nav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
