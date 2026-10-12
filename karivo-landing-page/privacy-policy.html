@@ -1,0 +1,954 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Read Kaarivo's Privacy Policy to understand how we collect, use, and protect your personal information when you use our property services in Kolkata.">
+
+  <title>Privacy Policy | Kaarivo</title>
+
+  <link rel="icon" type="image/jpeg" href="assets/kaarivo.jpeg">
+
+  <style>
+    :root {
+      --navy: #082b4c;
+      --orange: #f36a21;
+      --light: #f5f8fb;
+      --text: #17324d;
+      --muted: #64748b;
+      --border: #e3eaf1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, "Segoe UI",
+        Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 36px));
+      margin: auto;
+    }
+
+    /* HEADER */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid rgba(8, 43, 76, 0.08);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand img {
+      width: 126px;
+      height: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .nav-links a {
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      background: var(--orange);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 9px;
+      background: #25d366;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .btn:hover {
+      background: #1ebe5d;
+    }
+
+    .menu-btn {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--navy);
+      border-radius: 9px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .policy-hero {
+      padding: 76px 0 80px;
+      background:
+        radial-gradient(
+          circle at 12% 15%,
+          rgba(243, 106, 33, 0.08),
+          transparent 30%
+        ),
+        linear-gradient(135deg, #f5f8fb 0%, #fff 75%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--orange);
+    }
+
+    .policy-hero h1 {
+      color: var(--navy);
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+    }
+
+    .policy-hero p {
+      margin-top: 18px;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .breadcrumb {
+      margin-top: 22px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .breadcrumb a {
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    /* POLICY BODY */
+    .policy-section {
+      padding: 70px 0 90px;
+    }
+
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      align-items: start;
+      gap: 55px;
+    }
+
+    .policy-sidebar {
+      position: sticky;
+      top: 105px;
+      padding: 22px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .policy-sidebar h3 {
+      color: var(--navy);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .policy-sidebar a {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 7px 0;
+      transition: color 0.2s ease;
+    }
+
+    .policy-sidebar a:hover {
+      color: var(--orange);
+    }
+
+    .policy-content {
+      min-width: 0;
+    }
+
+    .policy-content section {
+      scroll-margin-top: 105px;
+      margin-bottom: 35px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-content section:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .policy-content h2 {
+      color: var(--navy);
+      font-size: 23px;
+      line-height: 1.35;
+      margin-bottom: 13px;
+    }
+
+    .policy-content p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 13px;
+    }
+
+    .policy-content ul {
+      padding-left: 22px;
+      margin: 12px 0 16px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .policy-content li {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .policy-content strong {
+      color: var(--text);
+    }
+
+    .contact-box {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 18px;
+    }
+
+    .contact-box h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .contact-box a {
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #061f37;
+      color: #fff;
+      padding: 48px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 50px;
+    }
+
+    .footer-brand img {
+      width: 145px;
+      border-radius: 8px;
+      padding: 7px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      color: #afc2d3;
+      max-width: 400px;
+      font-size: 13px;
+    }
+
+    footer h3 {
+      font-size: 14px;
+      margin-bottom: 13px;
+    }
+
+    footer .footer-grid a,
+    footer .footer-grid span {
+      display: block;
+      color: #afc2d3;
+      font-size: 13px;
+      margin: 7px 0;
+    }
+
+    footer .footer-grid a:hover,
+    .footer-bottom a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 35px;
+      padding-top: 20px;
+      color: #829caf;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-bottom a {
+      color: #afc2d3;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid rgba(243, 106, 33, 0.5);
+      outline-offset: 3px;
+    }
+      /* Floating WhatsApp Button */
+      .floating-whatsapp {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        width: 58px;
+        height: 58px;
+        background: #25d366;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+        z-index: 9999;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+      }
+
+      /* Pulse ring */
+      .floating-whatsapp::before {
+        content: "";
+        position: absolute;
+        inset: -7px;
+        border: 2px solid #25d366;
+        border-radius: 50%;
+        animation: whatsappPulse 2s ease-out infinite;
+      }
+
+      .floating-whatsapp::after {
+        content: "";
+        position: absolute;
+        inset: -7px;
+        border: 2px solid #25d366;
+        border-radius: 50%;
+        animation: whatsappPulse 2s ease-out infinite;
+        animation-delay: 1s;
+      }
+
+      .floating-whatsapp svg {
+        width: 30px;
+        height: 30px;
+        fill: currentColor;
+        position: relative;
+        z-index: 2;
+      }
+
+      .floating-whatsapp:hover {
+        color: #fff;
+        background: #1ebe5d;
+        transform: scale(1.08);
+      }
+
+      @keyframes whatsappPulse {
+        0% {
+          transform: scale(0.85);
+          opacity: 0.8;
+        }
+
+        70% {
+          transform: scale(1.35);
+          opacity: 0;
+        }
+
+        100% {
+          transform: scale(1.35);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .floating-whatsapp {
+          width: 52px;
+          height: 52px;
+          right: 16px;
+          bottom: 16px;
+        }
+
+        .floating-whatsapp svg {
+          width: 27px;
+          height: 27px;
+        }
+      }
+      /* MOBILE */
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+          position: absolute;
+          left: 18px;
+          right: 18px;
+          top: 70px;
+          background: #fff;
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 18px;
+          box-shadow: var(--shadow);
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 17px;
+        }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        top: 70px;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 18px;
+        box-shadow: 0 14px 40px rgba(8, 43, 76, 0.09);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .policy-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .policy-sidebar {
+        position: static;
+      }
+
+      .policy-sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 15px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .brand img {
+        width: 112px;
+      }
+
+      .policy-hero {
+        padding: 52px 0 55px;
+      }
+
+      .policy-hero p {
+        font-size: 15px;
+      }
+
+      .policy-section {
+        padding: 45px 0 60px;
+      }
+
+      .policy-content h2 {
+        font-size: 21px;
+      }
+
+      .policy-sidebar nav {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER: Reused from the Kaarivo homepage -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Kaarivo home">
+        <img src="assets/logo (3).png" alt="Kaarivo">
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#why-us">Why Kaarivo</a>
+        <a href="index.html#areas">Areas</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <a
+        class="btn nav-cta"
+        href="https://wa.me/9810993714?text=Hello%20Kaarivo%2C%20I%20would%20like%20a%20quote"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp Us
+      </a>
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        <svg width="21" height="21" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="policy-hero">
+      <div class="container">
+        <div class="eyebrow">Your privacy matters</div>
+        <h1>Privacy Policy</h1>
+        <p>
+          Learn how Kaarivo collects, uses, stores and protects your
+          information when you visit our website or enquire about our
+          home and property services in Kolkata.
+        </p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / Privacy Policy
+        </div>
+      </div>
+    </section>
+
+    <!-- POLICY BODY -->
+    <section class="policy-section">
+      <div class="container policy-layout">
+
+        <aside class="policy-sidebar">
+          <h3>On this page</h3>
+          <nav>
+            <a href="#introduction">Introduction</a>
+            <a href="#information">Information We Collect</a>
+            <a href="#use">How We Use Information</a>
+            <a href="#sharing">Information Sharing</a>
+            <a href="#cookies">Cookies and Analytics</a>
+            <a href="#security">Data Security</a>
+            <a href="#retention">Data Retention</a>
+            <a href="#rights">Your Privacy Choices</a>
+            <a href="#third-party">Third-Party Links</a>
+            <a href="#children">Children's Privacy</a>
+            <a href="#changes">Policy Updates</a>
+            <a href="#contact-policy">Contact Us</a>
+          </nav>
+        </aside>
+
+        <div class="policy-content">
+
+          <section id="introduction">
+            <h2>1. Introduction</h2>
+            <p>
+              Kaarivo ("we", "our" or "us") respects your privacy and
+              is committed to handling personal information responsibly.
+              This Privacy Policy explains how information may be collected
+              and used when you visit our website, contact us, request a
+              quotation or enquire about our services.
+            </p>
+            <p>
+              Kaarivo provides home repair, property maintenance and
+              improvement services in Kolkata, West Bengal, India. By using
+              our website or voluntarily providing information to us, you
+              acknowledge the practices described in this policy, subject
+              to applicable law.
+            </p>
+          </section>
+
+          <section id="information">
+            <h2>2. Information We Collect</h2>
+            <p>
+              Depending on how you interact with us, we may collect the
+              following types of information:
+            </p>
+            <ul>
+              <li>
+                <strong>Contact information:</strong> Your name, telephone
+                number, email address and other details you choose to share.
+              </li>
+              <li>
+                <strong>Service information:</strong> Property location,
+                service address, type of repair or maintenance required,
+                preferred appointment details and information relevant to
+                your enquiry.
+              </li>
+              <li>
+                <strong>Communications:</strong> Messages and details you
+                provide through telephone calls, WhatsApp or other
+                communication channels.
+              </li>
+              <li>
+                <strong>Technical information:</strong> Information such as
+                browser type, device details, approximate location derived
+                from technical data, pages visited and website usage data,
+                where made available through analytics or server logs.
+              </li>
+            </ul>
+            <p>
+              Please share only information reasonably necessary to help us
+              respond to your enquiry or provide the requested service.
+            </p>
+          </section>
+
+          <section id="use">
+            <h2>3. How We Use Your Information</h2>
+            <p>We may use the information collected to:</p>
+            <ul>
+              <li>Respond to enquiries and quotation requests.</li>
+              <li>Understand your property service requirements.</li>
+              <li>Coordinate appointments, visits and service delivery.</li>
+              <li>Communicate updates about a requested service.</li>
+              <li>Maintain website functionality and improve user experience.</li>
+              <li>Understand website traffic and performance.</li>
+              <li>Prevent misuse, fraud, security incidents and unauthorised activity.</li>
+              <li>Meet applicable legal and regulatory obligations.</li>
+            </ul>
+            <p>
+              We do not intend to use your contact information for unrelated
+              promotional communications without an appropriate basis or
+              consent where required by law.
+            </p>
+          </section>
+
+          <section id="sharing">
+            <h2>4. When We Share Information</h2>
+            <p>
+              We do not sell your personal information. We may share relevant
+              information only where reasonably necessary, including with:
+            </p>
+            <ul>
+              <li>
+                Service professionals or contractors involved in fulfilling
+                your specific service request.
+              </li>
+              <li>
+                Website hosting, analytics, communications and other
+                technology providers supporting our operations.
+              </li>
+              <li>
+                Professional advisers or public authorities where disclosure
+                is required or permitted by applicable law.
+              </li>
+            </ul>
+            <p>
+              We aim to limit shared information to what is necessary for the
+              relevant purpose. Third-party providers may process information
+              under their own terms and privacy policies.
+            </p>
+          </section>
+
+          <section id="cookies">
+            <h2>5. Cookies and Website Analytics</h2>
+            <p>
+              Our website may use cookies, similar technologies and analytics
+              tools to understand website usage, measure performance and
+              improve functionality.
+            </p>
+            <p>
+              We use Google Analytics through Google tag technology to help
+              understand how visitors interact with our website, subject to
+              the tool's configuration and applicable requirements. This may
+              involve technical information such as pages viewed, browser
+              details and interaction data.
+            </p>
+            <p>
+              You can manage or delete cookies through your browser settings.
+              Disabling certain cookies may affect some website features.
+              For additional details about data handled by Google, review
+              Google's own privacy documentation.
+            </p>
+          </section>
+
+          <section id="security">
+            <h2>6. Data Security</h2>
+            <p>
+              We take reasonable measures designed to protect personal
+              information against unauthorised access, loss, misuse or
+              disclosure. However, no website, electronic transmission or
+              storage system can be guaranteed to be completely secure.
+            </p>
+            <p>
+              You should avoid sending passwords, payment credentials,
+              government identity numbers or other highly sensitive
+              information through ordinary website enquiries or messaging
+              channels unless specifically required through a suitable,
+              secure process.
+            </p>
+          </section>
+
+          <section id="retention">
+            <h2>7. How Long We Keep Information</h2>
+            <p>
+              We retain personal information for as long as reasonably
+              necessary to respond to enquiries, provide services, maintain
+              appropriate business records, resolve disputes and meet
+              applicable legal obligations.
+            </p>
+            <p>
+              When information is no longer needed, we will take reasonable
+              steps to delete it or otherwise handle it in accordance with
+              applicable requirements, subject to legitimate retention needs.
+            </p>
+          </section>
+
+          <section id="rights">
+            <h2>8. Your Privacy Choices and Rights</h2>
+            <p>
+              Depending on applicable law, you may have rights to request
+              access to, correction of, or deletion of personal information
+              held by us, or to raise concerns about how it is handled.
+            </p>
+            <p>
+              You may contact us using the details below to make a privacy
+              request. We may need to verify your identity and clarify the
+              request before taking action. Certain information may need to
+              be retained where required by law or for legitimate business
+              purposes.
+            </p>
+          </section>
+
+          <section id="third-party">
+            <h2>9. Third-Party Websites and Services</h2>
+            <p>
+              Our website may link to third-party websites or services,
+              including WhatsApp. If you follow these links, the third
+              party's own privacy policy and terms may apply.
+            </p>
+            <p>
+              We do not control the privacy practices or security of
+              independent third-party services. Please review their policies
+              before sharing personal information through them.
+            </p>
+          </section>
+
+          <section id="children">
+            <h2>10. Children's Privacy</h2>
+            <p>
+              Our website and property services are intended for adults
+              arranging or enquiring about property services. We do not
+              knowingly seek to collect personal information directly from
+              children in connection with these services. If you believe a
+              child has provided personal information to us, please contact
+              us so that we can review the matter.
+            </p>
+          </section>
+
+          <section id="changes">
+            <h2>11. Changes to This Privacy Policy</h2>
+            <p>
+              We may update this Privacy Policy from time to time to reflect
+              changes in our services, website practices or applicable legal
+              requirements. Any revised version will be published on this
+              page with an updated revision date.
+            </p>
+            <p>
+              We encourage visitors to review this page periodically.
+            </p>
+          </section>
+
+          <section id="contact-policy">
+            <h2>12. Contact Us</h2>
+            <p>
+              If you have questions, concerns or requests relating to this
+              Privacy Policy or the handling of your personal information,
+              please contact Kaarivo.
+            </p>
+
+            <div class="contact-box">
+              <h3>Kaarivo — Home & Property Services</h3>
+              <p><strong>Location:</strong> Kolkata, West Bengal, India</p>
+              <p>
+                <strong>Phone:</strong>
+                <a href="tel:+919810993714">+91 9810993714</a>
+              </p>
+              <p>
+                <strong>WhatsApp:</strong>
+                <a
+                  href="https://wa.me/9810993714"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Contact us on WhatsApp</a>
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: Reused from the Kaarivo homepage -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/footer-logo.png" alt="Kaarivo">
+          <p>
+            Your property. Our expertise. Reliable repairs, maintenance and
+            improvement services for properties across Kolkata.
+          </p>
+        </div>
+
+        <div>
+          <h3>Services</h3>
+          <a href="index.html#services">Civil Work & Repairs</a>
+          <a href="index.html#services">Electrical Services</a>
+          <a href="index.html#services">Carpentry Services</a>
+          <a href="index.html#services">Plumbing Services</a>
+          <a href="index.html#services">Painting Services</a>
+          <a href="index.html#services">Property Maintenance</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <a href="tel:+919810993714">+91 9810993714</a>
+          <span>Kolkata, West Bengal</span>
+         
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Kaarivo. All rights reserved.</span>
+        <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Floating WhatsApp -->
+    <a
+      href="https://wa.me/9810993714?text=Hello%20Kaarivo%2C%20I%20would%20like%20a%20quote"
+      class="floating-whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with Kaarivo on WhatsApp"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.52 0 .19 5.32.19 11.88c0 2.09.55 4.13 1.59 5.93L.1 24l6.34-1.66a11.87 11.87 0 0 0 5.63 1.43h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.16-3.44-8.41zM12.08 21.77h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.76.98 1-3.66-.23-.38a9.84 9.84 0 0 1-1.51-5.24c0-5.44 4.43-9.87 9.88-9.87 2.64 0 5.12 1.03 6.98 2.89a9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.43 9.88-9.86 9.88zm5.42-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"
+        />
+      </svg>
+    </a>
+
+  <script>
+    (function () {
+      const menuBtn = document.getElementById("menuBtn");
+      const nav = document.getElementById("navLinks");
+
+      menuBtn.addEventListener("click", function () {
+        const isOpen = nav.classList.toggle("open");
+        menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        menuBtn.setAttribute(
+          "aria-label",
+          isOpen ? "Close menu" : "Open menu"
+        );
+      });
+
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          nav.classList.remove("open");
+          menuBtn.setAttribute("aria-expanded", "false");
+          menuBtn.setAttribute("aria-label", "Open menu");
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
